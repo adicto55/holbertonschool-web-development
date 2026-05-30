@@ -35,7 +35,7 @@ class Auth:
         """
         if request is None:
             return None
-        
+
         # request.headers.get returns None if the key doesn't exist
         return request.headers.get('Authorization')
 
@@ -53,7 +53,7 @@ class Auth:
         """
         if request is None:
             return None
-        
+
         from os import getenv
         session_name = getenv('SESSION_NAME', '_my_session_id')
         return request.cookies.get(session_name)
